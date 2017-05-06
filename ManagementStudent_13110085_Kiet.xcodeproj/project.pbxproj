@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		2E06DB471EBE496B005B054C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06DB461EBE496B005B054C /* AppDelegate.swift */; };
-		2E06DB491EBE496B005B054C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06DB481EBE496B005B054C /* ViewController.swift */; };
 		2E06DB4C1EBE496B005B054C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E06DB4A1EBE496B005B054C /* Main.storyboard */; };
 		2E06DB4E1EBE496B005B054C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E06DB4D1EBE496B005B054C /* Assets.xcassets */; };
 		2E06DB511EBE496B005B054C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E06DB4F1EBE496B005B054C /* LaunchScreen.storyboard */; };
 		2E06DB5C1EBE496B005B054C /* ManagementStudent_13110085_KietTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06DB5B1EBE496B005B054C /* ManagementStudent_13110085_KietTests.swift */; };
 		2E06DB671EBE496B005B054C /* ManagementStudent_13110085_KietUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06DB661EBE496B005B054C /* ManagementStudent_13110085_KietUITests.swift */; };
+		2E06DB761EBE49C3005B054C /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06DB751EBE49C3005B054C /* StudentTableViewCell.swift */; };
+		2E06DB781EBE4A17005B054C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06DB771EBE4A17005B054C /* Model.swift */; };
+		2E06DB7A1EBE4A37005B054C /* ManagementStudentCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06DB791EBE4A37005B054C /* ManagementStudentCollectionViewController.swift */; };
+		2E06DB7E1EBE4A96005B054C /* StudentDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06DB7D1EBE4A96005B054C /* StudentDetailTableViewController.swift */; };
+		2E06DB821EBE5085005B054C /* AddStudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06DB811EBE5085005B054C /* AddStudentTableViewController.swift */; };
+		2E06DB841EBE5840005B054C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E06DB831EBE5840005B054C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		2E06DB431EBE496B005B054C /* ManagementStudent_13110085_Kiet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManagementStudent_13110085_Kiet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E06DB461EBE496B005B054C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2E06DB481EBE496B005B054C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2E06DB4B1EBE496B005B054C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E06DB4D1EBE496B005B054C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E06DB501EBE496B005B054C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		2E06DB621EBE496B005B054C /* ManagementStudent_13110085_KietUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManagementStudent_13110085_KietUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E06DB661EBE496B005B054C /* ManagementStudent_13110085_KietUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementStudent_13110085_KietUITests.swift; sourceTree = "<group>"; };
 		2E06DB681EBE496B005B054C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E06DB751EBE49C3005B054C /* StudentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
+		2E06DB771EBE4A17005B054C /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2E06DB791EBE4A37005B054C /* ManagementStudentCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagementStudentCollectionViewController.swift; sourceTree = "<group>"; };
+		2E06DB7D1EBE4A96005B054C /* StudentDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentDetailTableViewController.swift; sourceTree = "<group>"; };
+		2E06DB811EBE5085005B054C /* AddStudentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStudentTableViewController.swift; sourceTree = "<group>"; };
+		2E06DB831EBE5840005B054C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				2E06DB461EBE496B005B054C /* AppDelegate.swift */,
-				2E06DB481EBE496B005B054C /* ViewController.swift */,
-				2E06DB4A1EBE496B005B054C /* Main.storyboard */,
+				2E06DB741EBE49B3005B054C /* View */,
 				2E06DB4D1EBE496B005B054C /* Assets.xcassets */,
-				2E06DB4F1EBE496B005B054C /* LaunchScreen.storyboard */,
 				2E06DB521EBE496B005B054C /* Info.plist */,
+				2E06DB801EBE4BB2005B054C /* Model */,
+				2E06DB7F1EBE4BAB005B054C /* Controller */,
+				2E06DB831EBE5840005B054C /* Constants.swift */,
 			);
 			path = ManagementStudent_13110085_Kiet;
 			sourceTree = "<group>";
@@ -123,6 +134,34 @@
 				2E06DB681EBE496B005B054C /* Info.plist */,
 			);
 			path = ManagementStudent_13110085_KietUITests;
+			sourceTree = "<group>";
+		};
+		2E06DB741EBE49B3005B054C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E06DB4A1EBE496B005B054C /* Main.storyboard */,
+				2E06DB4F1EBE496B005B054C /* LaunchScreen.storyboard */,
+				2E06DB751EBE49C3005B054C /* StudentTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2E06DB7F1EBE4BAB005B054C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E06DB791EBE4A37005B054C /* ManagementStudentCollectionViewController.swift */,
+				2E06DB7D1EBE4A96005B054C /* StudentDetailTableViewController.swift */,
+				2E06DB811EBE5085005B054C /* AddStudentTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2E06DB801EBE4BB2005B054C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E06DB771EBE4A17005B054C /* Model.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E06DB491EBE496B005B054C /* ViewController.swift in Sources */,
+				2E06DB841EBE5840005B054C /* Constants.swift in Sources */,
+				2E06DB7E1EBE4A96005B054C /* StudentDetailTableViewController.swift in Sources */,
+				2E06DB781EBE4A17005B054C /* Model.swift in Sources */,
+				2E06DB7A1EBE4A37005B054C /* ManagementStudentCollectionViewController.swift in Sources */,
+				2E06DB821EBE5085005B054C /* AddStudentTableViewController.swift in Sources */,
 				2E06DB471EBE496B005B054C /* AppDelegate.swift in Sources */,
+				2E06DB761EBE49C3005B054C /* StudentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

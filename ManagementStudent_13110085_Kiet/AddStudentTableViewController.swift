@@ -24,8 +24,8 @@ class AddStudentTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         // numberPad without "." button, decimalPad has "."
-        textFieldAge.keyboardType = UIKeyboardType.numberPad
-        textFieldID.keyboardType = UIKeyboardType.numberPad
+        /*textFieldAge.keyboardType = UIKeyboardType.numberPad
+        textFieldID.keyboardType = UIKeyboardType.numberPad*/
         
     }
 
@@ -52,5 +52,25 @@ class AddStudentTableViewController: UITableViewController {
             self.navigationController?.popViewController(animated: true)
         }
     
+    }
+    
+    // UITextFieldDelegate ( Keyboard will  disable when press return )
+    // User must set delegate from this textfield to this view
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textFieldName.isEditing {
+            textFieldID.becomeFirstResponder()
+        } else if textFieldUni.isEditing {
+            textFieldAge.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    // UIScrollViewDelegate ( Keyboard will disable when scroll the UIView )
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        textFieldName.resignFirstResponder()
+        textFieldID.resignFirstResponder()
+        textFieldAge.resignFirstResponder()
+        textFieldUni.resignFirstResponder()
+        textViewDescript.resignFirstResponder()
     }
 }

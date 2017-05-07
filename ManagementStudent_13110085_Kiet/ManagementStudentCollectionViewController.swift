@@ -31,6 +31,7 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = editButtonItem
         self.searchBarSetup()
     }
     
@@ -162,6 +163,25 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
             }
             
         }
+    }
+    
+    //MARK: - Delete when user swipe to left
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete){
+            students.remove(at: indexPath.row)
+            //update table view with new data source
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        }
+    }
+    
+    //MARK: - Sort when user click edit button
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        //get data in sourceIndexPath
+        let currentStudent = students[sourceIndexPath.row];
+        students.remove(at: sourceIndexPath.row)
+        students.insert(currentStudent, at: destinationIndexPath.row)
+        
     }
     
     //Animation for TableView

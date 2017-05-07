@@ -15,8 +15,9 @@ enum selectedScope:Int {
     case university = 3
 }
 
+
 class MangementStudentTableViewController: UITableViewController, UISearchBarDelegate{
-    
+    //let searchController = UISearchController(searchResultsController: nil)
     let searchBar = UISearchBar(frame: CGRect(x:0,y:0,width:(UIScreen.main.bounds.width),height:70))
     
     //get all students
@@ -53,6 +54,19 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
             filterTableView(ind: searchBar.selectedScopeButtonIndex, text: searchText)
             tableView.reloadData()
         }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.showsCancelButton = false
+        return true
     }
     
     func filterTableView(ind:Int,text:String) {
@@ -97,6 +111,7 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        initialStudent = students // reload initialStudent
         if Constants.isLoadDataAgain {
             let student: Student = Constants.student
             students.append(student)
@@ -148,14 +163,6 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
             
         }
     }
-    
-    /*//add delegate method for pushing to new detail controller
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let studentDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "StudentDetailViewController") as! StudentDetailTableViewController
-        studentDetailVC.studentModel = students[indexPath.row]
-        self.navigationController?.pushViewController(studentDetailVC, animated: true)
-        
-    }*/
     
     //Animation for TableView
     func animateTable() {

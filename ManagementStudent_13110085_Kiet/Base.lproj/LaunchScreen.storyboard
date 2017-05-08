@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +20,52 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="studentmanage" translatesAutoresizingMaskIntoConstraints="NO" id="WBd-dM-E2x">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6x-Au-oFO">
+                                <rect key="frame" x="0.0" y="629" width="375" height="38"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="V3Z-yM-wBd">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Anh Kiệt - FIT - HCMUTE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWe-Cd-rFO">
+                                            <rect key="frame" x="8" y="8" width="359" height="22"/>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mWe-Cd-rFO" firstAttribute="top" secondItem="V3Z-yM-wBd" secondAttribute="top" constant="8" id="3s6-Bc-sWF"/>
+                                        <constraint firstAttribute="bottom" secondItem="mWe-Cd-rFO" secondAttribute="bottom" constant="8" id="4q3-bx-gcR"/>
+                                        <constraint firstAttribute="trailing" secondItem="mWe-Cd-rFO" secondAttribute="trailing" constant="8" id="UAy-MU-ANR"/>
+                                        <constraint firstItem="mWe-Cd-rFO" firstAttribute="leading" secondItem="V3Z-yM-wBd" secondAttribute="leading" constant="8" id="WHu-lM-1hp"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="B6x-Au-oFO" secondAttribute="bottom" id="54b-UV-T2g"/>
+                            <constraint firstItem="WBd-dM-E2x" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="EHl-zV-xKD"/>
+                            <constraint firstAttribute="trailing" secondItem="B6x-Au-oFO" secondAttribute="trailing" id="F6T-fO-L42"/>
+                            <constraint firstItem="B6x-Au-oFO" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="609" id="JQd-b3-LP6"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="WBd-dM-E2x" secondAttribute="bottom" id="OzJ-q0-YwR"/>
+                            <constraint firstItem="WBd-dM-E2x" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ShD-Oy-roU"/>
+                            <constraint firstAttribute="trailing" secondItem="WBd-dM-E2x" secondAttribute="trailing" id="TK8-ie-1fY"/>
+                            <constraint firstItem="B6x-Au-oFO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="boT-Sw-SDJ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="studentmanage" width="1181" height="1181"/>
+    </resources>
 </document>

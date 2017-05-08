@@ -31,7 +31,8 @@ class StudentDetailTableViewController: UITableViewController, UIImagePickerCont
         imgDetailStudent.image = studentModel.image
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    //MARK: Detail Screen Disappear
+    override func viewWillDisappear(_ animated: Bool) {
         studentModel.name = textFieldName.text!
         studentModel.id = textFieldID.text!
         studentModel.university = textFieldUni.text!

@@ -17,6 +17,7 @@ enum selectedScope:Int {
 
 
 class MangementStudentTableViewController: UITableViewController, UISearchBarDelegate{
+    //MARK: - Property
     //let searchController = UISearchController(searchResultsController: nil)
     let searchBar = UISearchBar(frame: CGRect(x:0,y:0,width:(UIScreen.main.bounds.width),height:70))
     
@@ -51,9 +52,7 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
             students = initialStudent
             self.tableView.reloadData()
         }else {
-            print(initialStudent)
             filterTableView(ind: searchBar.selectedScopeButtonIndex, text: searchText)
-            tableView.reloadData()
         }
     }
     
@@ -110,15 +109,19 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Home Screen Appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        initialStudent = students // reload initialStudent
         if Constants.isLoadDataAgain {
             let student: Student = Constants.student
             students.append(student)
             initialStudent = students // reload initialStudent
             tableView.reloadData()
             Constants.isLoadDataAgain = false
+        }
+        else{
+            tableView.reloadData()
+            initialStudent = students // reload initialStudent
         }
         animateTable()
     }
@@ -145,8 +148,9 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
         
         cell.lblName.text = student.name
         cell.lblID.text = student.id
-        cell.lblAge.text = student.age
         cell.lblUni.text = student.university
+        cell.lblAge.text = student.age
+        cell.imgStudent.image = student.image
         
         return cell
     }
@@ -184,7 +188,7 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
         
     }
     
-    //Animation for TableView
+    //MARK: - Animation for TableView
     func animateTable() {
         
         let cells = tableView.visibleCells

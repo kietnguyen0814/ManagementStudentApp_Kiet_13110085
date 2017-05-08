@@ -108,12 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				2E06DB461EBE496B005B054C /* AppDelegate.swift */,
-				2E06DB741EBE49B3005B054C /* View */,
-				2E06DB4D1EBE496B005B054C /* Assets.xcassets */,
+				2E06DB831EBE5840005B054C /* Constants.swift */,
 				2E06DB521EBE496B005B054C /* Info.plist */,
 				2E06DB801EBE4BB2005B054C /* Model */,
+				2E06DB741EBE49B3005B054C /* View */,
 				2E06DB7F1EBE4BAB005B054C /* Controller */,
-				2E06DB831EBE5840005B054C /* Constants.swift */,
+				2E06DB4D1EBE496B005B054C /* Assets.xcassets */,
 			);
 			path = ManagementStudent_13110085_Kiet;
 			sourceTree = "<group>";
@@ -551,6 +551,7 @@
 				2E06DB6D1EBE496B005B054C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E06DB6E1EBE496B005B054C /* Build configuration list for PBXNativeTarget "ManagementStudent_13110085_KietTests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +560,7 @@
 				2E06DB701EBE496B005B054C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E06DB711EBE496B005B054C /* Build configuration list for PBXNativeTarget "ManagementStudent_13110085_KietUITests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +569,7 @@
 				2E06DB731EBE496B005B054C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

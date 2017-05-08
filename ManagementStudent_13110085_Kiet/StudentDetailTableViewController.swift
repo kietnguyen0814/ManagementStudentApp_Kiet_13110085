@@ -31,15 +31,10 @@ class StudentDetailTableViewController: UITableViewController, UIImagePickerCont
         imgDetailStudent.image = studentModel.image
     }
     
-    //MARK: Detail Screen Disappear
+    /*//MARK: Detail Screen Disappear
     override func viewWillDisappear(_ animated: Bool) {
-        studentModel.name = textFieldName.text!
-        studentModel.id = textFieldID.text!
-        studentModel.university = textFieldUni.text!
-        studentModel.age = textFieldAge.text!
-        studentModel.descript = textViewDescript.text!
-        studentModel.image = imgDetailStudent.image!
-    }
+        
+    }*/
     
     // MARK: - Pick a picture
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -82,6 +77,27 @@ class StudentDetailTableViewController: UITableViewController, UIImagePickerCont
         self.present(actionSheet, animated: true, completion: nil)
     }
     
+    // MARK: - User click button save
+    
+    @IBAction func btnSaveAction(_ sender: UIBarButtonItem) {
+        if textFieldName.text!.isEmpty || textFieldID.text!.isEmpty || textFieldUni.text!.isEmpty ||  textViewDescript.text!.isEmpty ||  textViewDescript.text!.isEmpty{
+            //create alert
+            let alert = UIAlertController(title: "Notification", message: "Please enter full information", preferredStyle: UIAlertControllerStyle.alert);
+            //add an action
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil));
+            //show alert
+            self.present(alert, animated: true, completion: nil);
+        }
+        else {
+            studentModel.name = textFieldName.text!
+            studentModel.id = textFieldID.text!
+            studentModel.university = textFieldUni.text!
+            studentModel.age = textFieldAge.text!
+            studentModel.descript = textViewDescript.text!
+            studentModel.image = imgDetailStudent.image!
+        }
+        self.navigationController?.popViewController(animated: true)
+    }
     
     // MARK: - UITextFieldDelegate ( Keyboard will  disable when press return )
     // User must set delegate from this textfield to this view
@@ -97,6 +113,7 @@ class StudentDetailTableViewController: UITableViewController, UIImagePickerCont
         }
         return true
     }
+
     
     // MARK: - UIScrollViewDelegate ( Keyboard will disable when scroll the UIView )
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {

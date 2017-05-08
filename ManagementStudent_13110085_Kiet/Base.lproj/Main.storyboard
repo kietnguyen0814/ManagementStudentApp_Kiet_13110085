@@ -134,7 +134,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XY0-ch-xol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1181.5999999999999" y="-222.63868065967017"/>
+            <point key="canvasLocation" x="1126" y="-222"/>
         </scene>
         <!--Add New Student-->
         <scene sceneID="tr0-tT-YHB">
@@ -148,7 +148,7 @@
                             <tableViewSection headerTitle="Studen Detail" id="qTT-s5-697">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="187" id="xxv-Ah-8FF">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="187"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="187"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xxv-Ah-8FF" id="aI7-JU-MAr">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
@@ -320,7 +320,7 @@
                             <tableViewSection headerTitle="Student Detail" id="hHD-fj-m1s">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="192" id="Sw9-uj-MmY">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="192"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="192"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sw9-uj-MmY" id="6WZ-CE-GRj">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="191.5"/>
@@ -466,6 +466,13 @@
                             <outlet property="delegate" destination="CCy-il-mS7" id="g5E-Il-ayL"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="LmP-3A-T2S">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="eRM-SI-LRD">
+                            <connections>
+                                <action selector="btnSaveAction:" destination="CCy-il-mS7" id="Vns-Zy-QRB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imgDetailStudent" destination="auS-pa-2Av" id="faM-iH-oEz"/>
                         <outlet property="textFieldAge" destination="lBf-45-nSx" id="aJc-oI-ghy"/>

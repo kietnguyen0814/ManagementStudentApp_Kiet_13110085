@@ -80,7 +80,7 @@ class StudentDetailTableViewController: UITableViewController, UIImagePickerCont
     // MARK: - User click button save
     
     @IBAction func btnSaveAction(_ sender: UIBarButtonItem) {
-        if textFieldName.text!.isEmpty || textFieldID.text!.isEmpty || textFieldUni.text!.isEmpty ||  textViewDescript.text!.isEmpty ||  textViewDescript.text!.isEmpty{
+        if textFieldName.text!.isEmpty || textFieldID.text!.isEmpty || textFieldUni.text!.isEmpty ||  textViewDescript.text!.isEmpty ||  textFieldAge.text!.isEmpty{
             //create alert
             let alert = UIAlertController(title: "Notification", message: "Please enter full information", preferredStyle: UIAlertControllerStyle.alert);
             //add an action
@@ -96,6 +96,7 @@ class StudentDetailTableViewController: UITableViewController, UIImagePickerCont
             studentModel.descript = textViewDescript.text!
             studentModel.image = imgDetailStudent.image!
         }
+        // Back To Management Student Screen
         self.navigationController?.popViewController(animated: true)
     }
     

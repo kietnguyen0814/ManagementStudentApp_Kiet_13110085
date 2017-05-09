@@ -91,6 +91,7 @@ class AddStudentTableViewController: UITableViewController, UIImagePickerControl
             let age = Int(textFieldAge.text!)! // "!"unwraped optional
             let student: Student = Student(named: textFieldName.text!, identify: textFieldID.text!, school: textFieldUni.text!, description: textViewDescript.text!, aged: String(describing: age), imaged: imgAddStudent.image!)
             Constants.student = student
+            // Back To Management Student Screen
             self.navigationController?.popViewController(animated: true)
         }
     

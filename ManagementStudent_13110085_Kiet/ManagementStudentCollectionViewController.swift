@@ -64,9 +64,8 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
         searchBar.showsCancelButton = true
     }
     
-    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = false
-        return true
     }
     
     func filterTableView(ind:Int,text:String) {
@@ -176,6 +175,7 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
             students.remove(at: indexPath.row)
             //update table view with new data source
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            initialStudent = students // reload initialStudent
         }
     }
     
@@ -185,7 +185,7 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
         let currentStudent = students[sourceIndexPath.row];
         students.remove(at: sourceIndexPath.row)
         students.insert(currentStudent, at: destinationIndexPath.row)
-        
+        initialStudent = students // reload initialStudent
     }
     
     //MARK: - Animation for TableView

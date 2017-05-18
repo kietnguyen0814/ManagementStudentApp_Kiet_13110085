@@ -57,7 +57,9 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
+        //searchBar.resignFirstResponder()
+        searchBar.endEditing(true)
+        tableView.reloadData()
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -78,6 +80,7 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
             })
             self.tableView.reloadData()
             
+            
         case selectedScope.id.rawValue:
             //fix of not searching when backspacing
             students = initialStudent.filter({ (stu) -> Bool in
@@ -92,12 +95,14 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
             })
             self.tableView.reloadData()
             
+            
         case selectedScope.university.rawValue:
             //fix of not searching when backspacing
             students = initialStudent.filter({ (stu) -> Bool in
                 return stu.university.lowercased().contains(text.lowercased())
             })
             self.tableView.reloadData()
+            
         default:
             print("No Type Found!!!")
         }
@@ -119,8 +124,9 @@ class MangementStudentTableViewController: UITableViewController, UISearchBarDel
             Constants.isLoadDataAgain = false
         }
         else{
+            //searchBar.text = ""
+            //initialStudent = students // reload initialStudent
             tableView.reloadData()
-            initialStudent = students // reload initialStudent
         }
         animateTable()
     }
